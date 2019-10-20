@@ -23,6 +23,31 @@ body, html {
 .w3-bar .w3-button {
   padding: 16px;
 }
+
+.typewriter h6 {
+  color: black;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
 </style>
 
 <body>
@@ -34,7 +59,7 @@ body, html {
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="https://lozelise.github.io/GlobalLunarPrioritisationNetwork/map" class="w3-bar-item w3-button"><i class="fa fa-map"></i> MAP</a>
+      <a href="#map" class="w3-bar-item w3-button"><i class="fa fa-map"></i> MAP</a>
       <a href="#vote" class="w3-bar-item w3-button"><i class="fa fa-th"></i> VOTE</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-users"></i> TEAM</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
@@ -65,8 +90,17 @@ body, html {
 <p>Locations of the areas of most value to scientists and the wider community. Shortest path analysis and display.</p>
 </div>
 
+<!-- Metrics section - insert map here -->
+<div class="w3-container w3-white" style="padding:10px 16px">
+<div class="typewriter">
+<h6>Astronaut Extravehicular Activity time saved:</h6><p class= "w3-large w3-text-orange">3.4 Hours</p> 
+<h6>Total Astronaut time saved:</h6><p class= "w3-large w3-text-orange">18.5 Hours</p>
+</div>
+</div>
+
+
 <!-- Contact Section -->
-<div class="w3-container w3-white" style="padding:28px 16px" id="contact">
+<div class="w3-container w3-light-grey" style="padding:28px 16px" id="contact">
   <h3 class="w3-center">CONTACT</h3>
   <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
   <div style="margin-top:48px">
@@ -127,3 +161,4 @@ function w3_close() {
 
 </body>
 </html>
+
